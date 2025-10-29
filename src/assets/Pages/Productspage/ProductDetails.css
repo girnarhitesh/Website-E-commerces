@@ -74,3 +74,82 @@
     font-family: Arial, Helvetica, sans-serif;
     width: 60vw;
 }
+
+.product-detail-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  padding: 20px;
+  font-family: Arial, sans-serif;
+}
+
+.image-section {
+  flex: 1;
+  text-align: center;
+}
+
+.main-image {
+  width: 300px;
+  height: 300px;
+  object-fit: contain;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+.thumbnail-row {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 15px;
+}
+
+.thumbnail {
+  width: 60px;
+  height: 60px;
+  object-fit: contain;
+  cursor: pointer;
+  opacity: 0.7;
+  border: 2px solid transparent;
+  border-radius: 8px;
+}
+
+.thumbnail.active {
+  opacity: 1;
+  border-color: #007bff;
+}
+
+.details-section {
+  flex: 1;
+}
+
+.actions button {
+  margin-right: 10px;
+  padding: 10px 18px;
+  border: none;
+  background-color: #007bff;
+  color: white;
+  cursor: pointer;
+  border-radius: 6px;
+  transition: 0.3s;
+}
+
+.actions .buy-now {
+  background-color: #28a745;
+}
+
+.actions button:hover {
+  opacity: 0.85;
+}
+
+.offer-page, .login-container {
+  text-align: center;
+  padding: 40px;
+}
+
+.login-container input {
+  padding: 10px;
+  width: 250px;
+  margin: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}

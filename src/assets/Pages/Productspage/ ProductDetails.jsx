@@ -1,5 +1,5 @@
 import React, { useEffect, useState, useContext } from "react";
-import { useParams } from "react-router-dom";
+import { useParams, useNavigate } from "react-router-dom";
 import { CartContext } from "../../Componetcs/ProductsSection/CartContext";
 import "./ProductDetails.css";
 
@@ -9,6 +9,7 @@ function ProductDetail() {
   const { addToCart } = useContext(CartContext);
   const [selectedImage, setSelectedImage] = useState("");
   const [loading, setLoading] = useState(true);
+  const navigate = useNavigate();
 
   useEffect(() => {
     fetch(`https://fakestoreapi.com/products/${id}`)
@@ -24,8 +25,18 @@ function ProductDetail() {
   if (loading) return <h2 className="loading">Loading product...</h2>;
   if (!product) return <h2>Product not found!</h2>;
 
-  // Fake gallery images (same main img for demo)
   const galleryImages = [product.image, product.image, product.image, product.image];
+
+  const handleBuyNow = () => {
+    const userEmail = localStorage.getItem("userEmail");
+    localStorage.setItem("lastViewedProduct", JSON.stringify(product));
+
+    if (!userEmail) {
+      navigate("/login"); // first login
+    } else {
+      navigate("/offer", { state: { product } });
+    }
+  };
 
   return (
     <div className="product-detail-container">
@@ -44,8 +55,8 @@ function ProductDetail() {
         </div>
       </div>
 
-      <div className="">
-        <h2 style={{fontFamily:'arial'}}>{product.title}</h2>
+      <div className="details-section">
+        <h2 style={{ fontFamily: "arial" }}>{product.title}</h2>
         <p className="category">Category: {product.category}</p>
         <p className="price">₹{product.price}</p>
         <p className="rating">⭐ {product.rating.rate} ({product.rating.count} reviews)</p>
@@ -53,7 +64,7 @@ function ProductDetail() {
 
         <div className="actions">
           <button onClick={() => addToCart(product)}>Add to Cart</button>
-          <button className="buy-now">Buy Now</button>
+          <button className="buy-now" onClick={handleBuyNow}>Buy Now</button>
         </div>
       </div>
     </div>
