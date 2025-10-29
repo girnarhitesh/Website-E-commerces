@@ -1,0 +1,121 @@
+.cart-page {
+  max-width: 1000px;
+  margin: 40px auto;
+  padding: 20px;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.cart-page h2 {
+  text-align: center;
+  font-size: 2rem;
+  color: #333;
+  margin-bottom: 30px;
+  font-family: Arial, Helvetica, sans-serif;
+  letter-spacing: 0.2px;
+}
+
+.cart-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #f9f9f9;
+  border-radius: 10px;
+  padding: 15px;
+  margin-bottom: 20px;
+  transition: box-shadow 0.3s ease;
+    font-family: Arial, Helvetica, sans-serif;
+  letter-spacing: 0.2px;
+}
+
+.cart-item:hover {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+.cart-item img {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-right: 20px;
+}
+
+.cart-info {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+    font-family: Arial, Helvetica, sans-serif;
+  letter-spacing: 0.2px;
+}
+
+.cart-info h4 {
+  font-size: 1.2rem;
+  margin-bottom: 8px;
+  color: #222;
+    font-family: Arial, Helvetica, sans-serif;
+  letter-spacing: 0.2px;
+}
+
+.cart-info p {
+  font-size: 1rem;
+  margin: 4px 0;
+  color: #555;
+    font-family: Arial, Helvetica, sans-serif;
+  letter-spacing: 0.2px;
+}
+
+.cart-info button {
+  background-color: #FFD813;
+  border: none;
+  color: black;
+  letter-spacing: 0.5px;
+  padding: 8px 16px;
+  font-size: 0.9rem;
+  border-radius: 6px;
+  cursor: pointer;
+  width: fit-content;
+  margin-top: 8px;
+  transition: background-color 0.3s ease;
+}
+
+
+
+.cart-page h3 {
+  text-align: right;
+  font-size: 1.5rem;
+  color: #222;
+  margin-top: 20px;
+  font-weight: 500;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Empty cart message */
+.cart-page p {
+  text-align: center;
+  font-size: 1.1rem;
+  color: #777;
+  letter-spacing: 0.5px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .cart-item {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .cart-item img {
+    margin-bottom: 10px;
+  }
+
+  .cart-info button {
+    align-self: center;
+  }
+
+  .cart-page h3 {
+    text-align: center;
+  }
+}

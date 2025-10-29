@@ -1,0 +1,217 @@
+/* ✅ Page Container */
+.products-container {
+    padding: 60px 40px;
+    text-align: center;
+    background: linear-gradient(135deg, #f9fafc, #eef1f6);
+    min-height: 100vh;
+    animation: fadeIn 0.8s ease-in-out;
+}
+
+/* ✅ Page Title */
+.page-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 30px;
+    color: #1a1a1a;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    animation: slideDown 0.6s ease;
+    text-align: justify;
+    font-family: "Ancizar Serif", serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+}
+
+
+
+/* ✅ Filter Buttons */
+.filters {
+    display: flex;
+    justify-content: justifay;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-bottom: 40px;
+}
+
+.filters button {
+    background-color: #fff;
+    border: 0.5px solid #9b9b9b;
+    color: black;
+    padding: 10px 30px;
+    font-size: 1rem;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.filters button:hover,
+.filters button:focus {
+    background-color: #7ab3efd3;
+    color: white;
+    transform: scale(1.05);
+}
+
+/* ✅ Products Grid */
+.products-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 25px;
+    justify-content: center;
+    align-items: stretch;
+}
+
+/* ✅ Product Card */
+.product-card {
+    background-color: #fff;
+    border-radius: 16px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+    padding: 20px;
+    text-align: center;
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+    animation: fadeUp 0.5s ease-in-out;
+}
+
+.product-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.12);
+}
+
+/* ✅ Product Image */
+.product-img {
+    width: 100%;
+    max-height: 220px;
+    object-fit: contain;
+    border-radius: 10px;
+    margin-bottom: 15px;
+    transition: transform 0.4s ease;
+}
+
+.product-card:hover .product-img {
+    transform: scale(1.05);
+}
+
+/* ✅ Product Title */
+.product-card h3 {
+    font-size: 1rem;
+    font-weight: 600;
+    color: #222;
+    margin-bottom: 8px;
+    min-height: 45px;
+    font-family: Arial, Helvetica, sans-serif;
+    letter-spacing: 0.5px;
+}
+
+/* ✅ Price + Category */
+.price {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: #007bff;
+    margin-bottom: 6px;
+        font-family: Arial, Helvetica, sans-serif;
+    letter-spacing: 0.5px;
+}
+
+.category {
+    font-size: 0.9rem;
+    color: #777;
+    margin-bottom: 10px;
+        font-family: Arial, Helvetica, sans-serif;
+    letter-spacing: 0.5px;
+}
+
+/* ✅ Add to Cart Button */
+.add-cart-btn {
+    background: linear-gradient(#FFD814);
+    color: white;
+    border: none;
+    border-radius: 10px;
+    padding: 10px 30px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+        font-family: Arial, Helvetica, sans-serif;
+    letter-spacing: 0.5px;
+    border-radius: 30px;
+}
+
+
+/* ✅ Loading Animation */
+.loading {
+    font-size: 1.6rem;
+    color: #007bff;
+    animation: pulse 1.2s infinite;
+    text-align: center;
+    margin-top: 80px;
+}
+
+/* ✅ Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: scale(0.98);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@keyframes slideDown {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes pulse {
+    0% {
+        opacity: 0.5;
+    }
+
+    50% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0.5;
+    }
+}
+
+/* ✅ Responsive Design */
+@media (max-width: 992px) {
+    .page-title {
+        font-size: 2rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .products-container {
+        padding: 40px 20px;
+    }
+
+    .filters button {
+        padding: 8px 14px;
+    }
+
+    .product-card {
+        padding: 15px;
+    }
+}
