@@ -10,14 +10,21 @@ function Productspage() {
   const { addToCart, searchQuery } = useContext(CartContext);
   const navigate = useNavigate();
 
+  // ✅ Ye line updated hai — fakestoreapi ke badle apne local backend ko hit kar raha hai
   useEffect(() => {
-    fetch("https://fakestoreapi.com/products")
-      .then((res) => res.json())
+    fetch("http://localhost:5000/api/products")
+      .then((res) => {
+        if (!res.ok) throw new Error("Failed to fetch products");
+        return res.json();
+      })
       .then((data) => {
         setProducts(data);
         setLoading(false);
       })
-      .catch((err) => console.error(err));
+      .catch((err) => {
+        console.error("❌ Error fetching products:", err);
+        setLoading(false);
+      });
   }, []);
 
   const filteredProducts = products.filter((p) => {

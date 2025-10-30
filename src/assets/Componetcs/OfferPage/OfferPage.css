@@ -1,0 +1,139 @@
+.offer-container {
+  text-align: center;
+  margin: 80px auto;
+  padding: 40px;
+  max-width: 600px;
+  background: #ffffff;
+  border-radius: 16px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+  transition: all 0.4s ease;
+  animation: fadeIn 0.7s ease-in-out;
+}
+
+.offer-container:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+}
+
+.offer-title {
+  font-size: 1.8rem;
+  font-weight: 400;
+  color: #222;
+  margin-bottom: 20px;
+  letter-spacing: 0.5px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.offer-image {
+  width: 220px;
+  height: 220px;
+  object-fit: contain;
+  border-radius: 12px;
+  margin: 20px 0;
+  transition: transform 0.3s ease;
+}
+
+.offer-image:hover {
+  transform: scale(1.05);
+}
+
+.offer-product-title {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 8px;
+  letter-spacing: 0.5px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.offer-price {
+  font-size: 1rem;
+  color: #777;
+    letter-spacing: 0.5px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.offer-discount {
+  font-size: 1.1rem;
+  color: #2e7d32;
+  margin: 8px 0;
+  font-weight: 600;
+    letter-spacing: 0.5px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.offer-final-price {
+  font-size: 1.5rem;
+  color: #000;
+  font-weight: bold;
+  margin-top: 10px;
+    letter-spacing: 0.5px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.offer-button {
+  margin-top: 25px;
+  padding: 12px 30px;
+  background: #FFD813;
+  color: #000;
+  border: none;
+  border-radius: 30px;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  letter-spacing: 1px;
+  transition: all 0.3s ease;
+}
+
+
+.back-button {
+  margin-top: 15px;
+  display: inline-block;
+  padding: 8px 18px;
+  background: #ccc;
+  border-radius: 5px;
+  color: #222;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.back-button:hover {
+  background: #bbb;
+}
+
+/* Animation for fade-in effect */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Mobile Responsive */
+@media (max-width: 480px) {
+  .offer-container {
+    width: 90%;
+    padding: 25px;
+  }
+
+  .offer-title {
+    font-size: 1.5rem;
+  }
+
+  .offer-image {
+    width: 160px;
+    height: 160px;
+  }
+
+  .offer-final-price {
+    font-size: 1.2rem;
+  }
+
+  .offer-button {
+    width: 100%;
+  }
+}

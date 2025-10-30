@@ -36,6 +36,7 @@
 
 .thumbnail.active {
   border-color: #007bff;
+    border-radius: 30px;
 }
 
 .details-section {
@@ -67,6 +68,7 @@
 
 .actions .buy-now {
   background: #007bff;
+  border-radius: 30px;
 }
 .description{
     font-size: 15px;
@@ -131,6 +133,7 @@
   cursor: pointer;
   border-radius: 6px;
   transition: 0.3s;
+    border-radius: 30px;
 }
 
 .actions .buy-now {
